@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vuelos?serverTimezone=UTC
+    username: root
+    password: cursos   
+  jpa:
+    hibernate:
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  application:
+    name: servicio-vuelos
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER #Swagger
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    instance-id: instancia1 #instancia2
+server:
+  port: 7100 #7101
